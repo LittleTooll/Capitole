@@ -29,15 +29,12 @@ Como opcionales:
 * MongoDB (nos servirá para que funcionen los test unitarios de JUnit al mavenizar)
 * Docker / Docker-compose (nos servirá para levantar la aplicación con su propio contenedor MongoDB y que los servicios queden escuchando peticiones)
 
-
-### Installing
-
-## Descargar el SW de GitHub:
+### Descargar el SW de GitHub:
 ```
 git clone https://github.com/LittleTooll/Capitole.git
 ```
 
-## Construir y ejecutar las pruebas unitarias:
+### Construir y ejecutar las pruebas unitarias:
 Ejecutar desde el directorio raíz del repositorio
 ```
 mvn clean install	
@@ -77,7 +74,7 @@ Para ello será imprescindible tener un mongoDB instalado y escuchando en el pue
 CREATED ORDER: Order(customer=Customer(name=Felipe, surname=Perea, email=felipe.perea.toledo@gmail.com), listIdsPhones=[1, 3, 5], total=9)
 ```
 
-## Dockerizar
+### Dockerizar
 Ejecutar desde el directorio raíz del repositorio
 ```
 docker-compose up -d
@@ -85,7 +82,7 @@ docker-compose up -d
 
 De esta forma, creamos y arrancamos el servicio y el mongoDb.
 
-## Running the tests
+### Running the tests
 
 Ejecutaremos los siguientes test desde consola:
 
