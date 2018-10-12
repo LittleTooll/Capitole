@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  challengue:
+    build: ./
+    environment:
+      - SERVER_PORT=8080
+      - MONGODB_URI=mongodb://mymongo:27017/mydb
+      - MONGODB_STATUS_HOST=mymongo
+      - MONGODB_STATUS_PORT=28017
+    ports:
+      - 2080:8080
+    volumes:
+      - target:/usr/src/challenge
+  mymongo:
+    image: mongo:3.4
+    ports:
+      - 12345:27017
+      - 23456:28017
+    command: ["mongod", "--rest"]
