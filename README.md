@@ -119,8 +119,8 @@ Order(customer=Customer(name=Felipe, surname=Perea, email=felipe.perea.toledo@gm
 
 ## Questions
 - How would you improve the system?
-+ Cachear el catálogo de teléfonos, es decir, dicha información no debe variar demasiado, y en caso de hacerlo deberemos refrescar la caché, pero evitaríamos accesos a BD. 
-+ No recuperar todo el catálogo de teléfonos al ir a crear / validar un pedido, sino ir consultando uno a uno los teléfonos. Lo habitual será que un pedido sea de pocos teléfonos y el catálogo sea muy grande.
+	+ Cachear el catálogo de teléfonos, es decir, dicha información no debe variar demasiado, y en caso de hacerlo deberemos refrescar la caché, pero evitaríamos accesos a BD. 
+	+ No recuperar todo el catálogo de teléfonos al ir a crear / validar un pedido, sino ir consultando uno a uno los teléfonos. Lo habitual será que un pedido sea de pocos teléfonos y el catálogo sea muy grande.
 
 - How would you avoid your order API to be overflow?
 	+ Limitar el número de request por minuto / ip
