@@ -1,0 +1,13 @@
+# class
+/target
+
+# logs
+/logs
+logCron.log
+
+# IDEs and editors
+/.settings
+.project
+.classpath
+.pydevproject
+config.pyc
