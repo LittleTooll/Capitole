@@ -10,8 +10,6 @@ services:
       - MONGODB_STATUS_PORT=28017
     ports:
       - 2080:8080
-    volumes:
-      - target:/usr/src/challenge
   mymongo:
     image: mongo:3.4
     ports:
