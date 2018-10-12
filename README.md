@@ -109,8 +109,10 @@ curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"customer":{"name":"Felipe", "surname":"Perea", "email":"felipe.perea.toledo@gmail.com"}, "listIdsPhones":["1","2"]}' \
   http://localhost:2080//challenge/order
+```
 
-
+Visualizaremos lo siguiente por consola:
+```
 Order(customer=Customer(name=Felipe, surname=Perea, email=felipe.perea.toledo@gmail.com), listIdsPhones=[1, 2], total=35)
 ```
 
