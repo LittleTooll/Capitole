@@ -37,7 +37,7 @@ public class OrderController{
 			// Mostramos por consola la orden
 			System.out.println("CREATED ORDER: " + order);
 			
-			return ResponseEntity.ok(EnumValidation.OK.descripcion());
+			return ResponseEntity.ok(order.toString());
 		// No superada la validación
 		} else {
 			return ResponseEntity
