@@ -3,6 +3,7 @@ package com.capitole.challenge.control;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,16 +20,25 @@ public class CatalogController{
 	private PhoneRepository phoneRepo;
 
 	@RequestMapping(method = RequestMethod.POST)
-    public void createPhone (@RequestBody(required = true) Phone phone) {
-    	
+    public ResponseEntity<String> createPhone (@RequestBody(required = true) Phone phone) {
+
 		phoneRepo.save(phone);
 		
+		return ResponseEntity.ok("Phone created");
     }
 	
     @RequestMapping(method = RequestMethod.GET)
-    public List<Phone> getPhones( ) {
+    public ResponseEntity<List<Phone>> getPhones( ) {
 
-    	return phoneRepo.findAll();
+    	return ResponseEntity.ok(phoneRepo.findAll());
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE)
+    public ResponseEntity<String> deletePhones( ) {
+    	
+    	phoneRepo.deleteAll();
+    	
+    	return ResponseEntity.ok("Phones deleted");
     }
 
 }

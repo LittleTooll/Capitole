@@ -35,7 +35,7 @@ public class OrderController{
 			order.setTotal(val.getTotal());
 			
 			// Mostramos por consola la orden
-			System.out.println(order);
+			System.out.println("CREATED ORDER: " + order);
 			
 			return ResponseEntity.ok(EnumValidation.OK.descripcion());
 		// No superada la validación
@@ -60,9 +60,8 @@ public class OrderController{
     	if (order.getCustomer() == null)
     		return new Validation (null, EnumValidation.CUSTOMER_EMPTY);
     	
-    	// TODO: Acceder por HTTP
     	// Recuperamos el catálogo de teléfonos
-    	List<Phone> phones = catalogController.getPhones();
+    	List<Phone> phones = catalogController.getPhones().getBody();
 
     	// Lo pasamos a un map para que los accesos sean más rápidos
     	Map<String, Phone> map = 
